@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="beforeImg"></div>
+        <div class="head">个人信息（*为必填项）</div>
+    </div>
+    <div class="body">
+        <div class="needed name own">姓名
+            <input type="text" class="input">
+        </div>
+        <div class="needed gender own">性别</div>
+        <div class="needed birth own">出生日期</div>
+        <div class="needed workTime own">参加工作年份</div>
+        <div class="idDetail"></div>
+        <div class="oceanside own"></div>
+        <div class="poli own"></div>
+        <div class="needed account own"></div>
+        <div class="needed nlive own"></div>
+        <div class="phAddr own"></div>
+        <div class="needed ph own"></div>
+        <div class="needed email own"></div>
+        <div class="blog own"></div>
+    </div>
+    <div class="footer"></div>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            min-height: 100%;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: normal;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #232323;
+        }
+
+        body,
+        input {
+            font-family: "Microsoft YaHei";
+            font-size: 35px;
+            color: #333;
+        }
+
+        img {
+            border: none;
+            vertical-align: middle;
+        }
+
+
+
+        table {
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+
+        input,
+        textarea {
+            outline: none;
+            border: none;
+        }
+
+        textarea {
+            resize: none;
+            overflow: auto;
+        }
+
+        .clearfix {
+            zoom: 1;
+        }
+
+        .clearfix:after {
+            content: ".";
+            width: 0;
+            height: 0;
+            visibility: hidden;
+            display: block;
+            clear: both;
+            overflow: hidden;
+        }
+
+        .fl {
+            float: left
+        }
+
+        .fr {
+            float: right
+        }
+
+        .tl {
+            text-align: left;
+        }
+
+        .tc {
+            text-align: center
+        }
+
+        .tr {
+            text-align: right;
+        }
+
+        .ellipse {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .inline {
+            display: inline-block;
+            *display: inline;
+            *zoom: 1;
+        }
+    </style>
+    <style>
+        .header {
+            width: 100%;
+            height: 100px;
+            background-color: #e5ecf5;
+            display: flex;
+        }
+        .body{
+            width: 80%;
+            margin: 0 auto;
+        }
+        .beforeImg {
+            width: 0;
+            height: 0;
+            border: 50px solid transparent;
+            border-bottom: 50px solid white;
+
+        }
+        .head {
+            font-weight: bolder;
+            font-size: 55px;
+            line-height: 100px;
+        }
+        .needed::before {
+            content: "*";
+            display: inline-block;
+            margin-left: 10px;
+            width: 50px;
+            color: #FFD200;
+        }
+        .own{
+            width: 100%;
+            height: 120px;
+            margin-top: 20px;
+            line-height: 120px;
+        }
+        .input{
+            height: 50px;
+            background-color: #ffab44;
+        }
+    </style>
+</body>
+
+</html>

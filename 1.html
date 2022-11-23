@@ -1,21 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>hzc</title>
 </head>
+
 <body>
     <div class="a"></div>
-    <input type="checkbox">checkbox</input>
+    <button id="click">
+        click here
+    </button>
+    <script>
+        let a = document.querySelector('.a')
+        let btn = document.querySelector('#click')
+        let timer = null
+        function move() {
+            a.style.transition = '1s ease'
+            if(this.timer) {
+                clearInterval(this.timer)
+                this.timer = null
+                console.log("清除");
+                console.log(this.timer);
+            } else {
+                this.timer = setInterval(() => {
+                    a.style.transform = `translate(${trans}px)`
+                    trans += 100
+                    console.log(trans);
+                }, 1000)
+                console.log("开始");
+            }
 
+        }
+        let trans = 100
+        btn.addEventListener('click', move)
+
+    </script>
     <style>
-    .a{
-        width: 60px;
-        height: 60px;
-        background-color: rgb(48, 29, 29);
-    }
+        .a {
+            width: 60px;
+            height: 60px;
+            background-color: rgb(230, 15, 15);
+            border-radius: 50%;
+            position: absolute;
+            top: 50px;
+        }
+
+        btn {
+            width: 50px;
+            height: 50px;
+            background-color: rgb(236, 9, 9);
+        }
     </style>
 </body>
+
 </html>
