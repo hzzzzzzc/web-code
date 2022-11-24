@@ -14,23 +14,195 @@
         <div class="head">个人信息（*为必填项）</div>
     </div>
     <div class="body">
-        <div class="needed name own">姓名
-            <input type="text" class="input">
+        <div class="needed name own"><span class="text">姓名</span>
+            <div class="hint">
+                <input type="text" class="input" maxlength="10" id="name">
+                <span id="hint">请输入您的姓名</span>
+            </div>
         </div>
-        <div class="needed gender own">性别</div>
-        <div class="needed birth own">出生日期</div>
-        <div class="needed workTime own">参加工作年份</div>
-        <div class="idDetail"></div>
-        <div class="oceanside own"></div>
-        <div class="poli own"></div>
-        <div class="needed account own"></div>
-        <div class="needed nlive own"></div>
-        <div class="phAddr own"></div>
-        <div class="needed ph own"></div>
-        <div class="needed email own"></div>
-        <div class="blog own"></div>
+        <div class="needed gender own"><span class="text">性别</span>
+            <label>
+                <input type="radio" name="gender" value="男" checked>
+                <span class="radio">男</span>
+            </label>
+            <label><input type="radio" name="gender" value="女">
+                <span class="radio">女</span></label>
+
+        </div>
+        <div class="needed birth own"><span class="text">出生日期</span>
+            <div class="hint">
+                <input type="text" class="input" style="width: 200px;" maxlength="4"></input>
+                <span>年</span>
+                <input type="text" class="input" style="width: 120px;" maxlength="2"></input>
+                <span>月</span>
+                <span id="hint">请选择出生日期年份 请选择出生日期月份</span>
+            </div>
+        </div>
+        <div class="needed workTime own"><span class="text">参加工作年份</span>
+            <select name="  " id="">
+                <option value="2004年7月" selected>2004年7月</option>
+                <option value="2005年7月">2005年7月</option>
+                <option value="2006年7月">2006年7月</option>
+                <option value="2007年7月">2007年7月</option>
+            </select>
+        </div>
+        <div class="idDetail">
+            <div class="needed marrige sin"><span class="text">婚姻状况</span>
+                <label>
+                    <input type="radio" name="mari" value="未婚" checked>
+                    <span class="radio">未婚</span>
+                </label>
+                <label>
+                    <input type="radio" name="mari" value="已婚">
+                    <span class="radio">已婚</span>
+                </label>
+                <label>
+                    <input type="radio" name="mari" value="离异">
+                    <span class="radio">离异</span>
+                </label>
+                <label>
+                    <input type="radio" name="mari" value="保密">
+                    <span class="radio">保密</span>
+                </label>
+            </div>
+            <div class="needed country sin"><span class="text">国家地区</span>
+                <select name="  " id="">
+                    <option value="中国大陆" selected>中国大陆</option>
+                    <option value="中国香港">中国香港</option>
+                    <option value="中国台湾">中国台湾</option>
+                    <option value="外国">外国</option>
+                </select>
+            </div>
+            <div class="needed idType sin"><span class="text">证件类型</span>
+                <select name="" id="">
+                    <option value="其他" selected>其他</option>
+                    <option value="身份证">身份证</option>
+                </select>
+            </div>
+            <div class="needed idNumber sin"><span class="text">证件号码</span>
+                <div class="hint">
+                    <input type="text" class="input" maxlength="18">
+                    <span id="hint">请填写证件号码</span>
+                </div>
+            </div>
+        </div>
+        <div class="oceanside own" style="margin-left: 60px;"><span class="text">海外工作/学习经历</span>
+            <label>
+                <input type="radio" name="has" value="yes">
+                <span class="radio">有</span>
+            </label>
+            <label>
+                <input type="radio" name="has" value="no" checked>
+                <span class="radio">无</span>
+            </label>
+        </div>
+        <div class="poli own">
+            <span class="text" style="margin-left: 60px;">政治面貌</span>
+            <label>
+                <input type="radio" name="pol" value="p1">
+                <span class="radio">中共党员（含预备党员）</span>
+            </label>
+            <label>
+                <input type="radio" name="pol" value="p2">
+                <span class="radio">团员</span>
+            </label>
+            <label>
+                <input type="radio" name="pol" value="p3">
+                <span class="radio">群众</span>
+            </label>
+            <label>
+                <input type="radio" name="pol" value="p4">
+                <span class="radio">民主党派</span>
+            </label>
+            <label>
+                <input type="radio" name="pol" value="p5">
+                <span class="radio">无党派人士</span>
+            </label>
+            <label>
+                <input type="radio" name="pol" value="p6">
+                <span class="radio">无可奉告</span>
+            </label>
+        </div>
+        <div class="needed account own"><span class="text">户口所在地</span>
+            <select name="" id="">
+                <option value="苏州" selected>苏州</option>
+                <option value="北京">北京</option>
+                <option value="上海">上海</option>
+            </select>
+        </div>
+        <div class="needed nlive own"><span class="text">现居住城市</span>
+            <select name="" id="">
+                <option value="苏州" selected>苏州</option>
+                <option value="北京">北京</option>
+                <option value="上海">上海</option>
+            </select>
+        </div>
+        <div class="phAddr own" style="display: flex;">
+            <div class="tx sin"><span class="text" style="margin-left: 60px;">通信地址</span>
+                <input type="text" class="input" style="background-color: #fff; ">
+            </div>
+            <div class="yz sin"><span class="text" style="margin-left: 60px;">邮政编码</span>
+                <input type="text" class="input" style="background-color: #fff;">
+            </div>
+        </div>
+        <div class="needed ph own"><span class="text">首选联系电话</span>
+            <div class="hint">
+                <select name="" id="" style="width: 180px;">
+                    <option value="移动电话">移动电话</option>
+                    <option value="固定电话">固定电话</option>
+                </select>
+                <input type="text" class="input" maxlength="11">
+                <a href="https://wwww.baidu.com">添加其它联系方式</a>
+                <span>（最多三项）</span>
+                <span id="hint">请填写您的联系方式</span>
+            </div>
+        </div>
+        <div class="needed email own"><span class="text">电子邮箱</span>
+            <div class="hint">
+                <input type="text" class="input" style="background-color: #fff;" placeholder="zt05130@163.com">
+                <a href="https://juejin.cn" style="margin-left: 0 10px 0 50px;">修改</a>
+                <input type="text" class="input" style="background-color: #fff;" placeholder="检查E-mail是否可用">
+                <span id="hint" style="color: #ababab; font-size: 28px">提示：修改了该地址不会改变您的登录用户名，此邮箱是用来接收HR的来信，包括取回密码</span>
+            </div>
+        </div>
+        <div class="blog own"><span class="text" style="margin-left: 60px;">个人主页/博客</span>
+            <input type="text" class="input" style="background-color: #fff;">
+        </div>
+        <div class="own">
+            <button style="margin-left: 370px; background-color: #454a97;" class="sub">保存</button>
+            <a href="" style="margin: 0 20px ;text-decoration: none;">英文修改 </a>
+            <a href="" style="margin: 0 20px ;text-decoration: none;"> 返回我的智联</a>
+        </div>
     </div>
-    <div class="footer"></div>
+    <div class="footer">
+        <hr>
+    </div>
+
+    <script>
+        let name, gender = 'man', birth, workTime, country
+        const sub = document.querySelector('.sub')
+        sub.addEventListener('click', () => {
+            check()
+        })
+        function check() {
+            name = document.getElementById('name').value
+            gender = document.getElementsByName('gender')
+            for (let i = 0; i < gender.length; i++) {
+                if (gender[i].checked) {
+                    gender = gender[i].value
+                }
+            }
+            if (name) {
+                post()
+            }
+            else {
+                alert('没填完，只要填名字性别就行了')
+            }
+        }
+        function post() {
+            alert(`${name}，性别${gender}`);
+        }
+    </script>
 
     <style>
         * {
@@ -58,12 +230,9 @@
             list-style: none;
         }
 
-        a {
-            text-decoration: none;
-            color: #232323;
-        }
 
         body,
+        select,
         input {
             font-family: "Microsoft YaHei";
             font-size: 35px;
@@ -146,10 +315,12 @@
             background-color: #e5ecf5;
             display: flex;
         }
-        .body{
+
+        .body {
             width: 80%;
             margin: 0 auto;
         }
+
         .beforeImg {
             width: 0;
             height: 0;
@@ -157,11 +328,13 @@
             border-bottom: 50px solid white;
 
         }
+
         .head {
             font-weight: bolder;
             font-size: 55px;
             line-height: 100px;
         }
+
         .needed::before {
             content: "*";
             display: inline-block;
@@ -169,15 +342,78 @@
             width: 50px;
             color: #FFD200;
         }
-        .own{
+
+        .own {
             width: 100%;
-            height: 120px;
+            height: 80px;
             margin-top: 20px;
-            line-height: 120px;
+            line-height: 60px;
         }
-        .input{
+
+        select {
+            width: 400px;
+        }
+
+        input {
+            width: 30px;
+            height: 30px;
+            text-indent: 10px;
+
+        }
+
+        .input {
+            width: 400px;
             height: 50px;
             background-color: #ffab44;
+            border: 1px solid gray;
+        }
+
+        .text {
+            width: 300px;
+            display: inline-block;
+        }
+
+        span.radio {
+            margin: 0 5px;
+        }
+
+        .hint {
+            display: inline-block;
+            position: relative;
+            width: 60%;
+        }
+
+        #hint {
+            position: absolute;
+            color: #ffab44;
+            left: 0;
+            top: 50px;
+            white-space: pre-wrap;
+        }
+
+        .idDetail {
+            display: flex;
+            flex-flow: row wrap;
+            width: 100%;
+            height: 260px;
+        }
+
+        .sin {
+            margin: 20px 20px 0 0;
+            width: 45%;
+            height: 120px;
+        }
+
+        .footer {
+            width: 95%;
+            margin: 0 auto;
+            height: 20px;
+        }
+
+        button {
+            width: 200px;
+            height: 80px;
+            font-size: 50px;
         }
     </style>
 </body>

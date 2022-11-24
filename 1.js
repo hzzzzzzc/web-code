@@ -1,3 +1,1 @@
-function throttle(){
-    
-}
+console.log(typeof(0));
