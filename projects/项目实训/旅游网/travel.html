@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./default.css" type="text/css">
+    <title>旅游网</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="headerBgi"></div>
+        <div class="wrapper">
+            <div class="nav">
+                <div class="navImg">
+                    <img src="../pic/logo.png" alt="" style="max-width: 100%;">
+                </div>
+                <div class="navItem on"><a href="">
+                        首页
+                    </a></div>
+                <div class="navItem"><a href="">
+                        目的地
+                    </a></div>
+                <div class="navItem"><a href="">
+                        旅游攻略
+                    </a></div>
+                <div class="navItem"><a href="">
+                        去旅行
+                    </a></div>
+                <div class="navItem"><a href="">
+                        机票火车票
+                    </a></div>
+                <div class="navItem"><a href="">
+                        订酒店
+                    </a></div>
+                <div class="navItem"><a href="">
+                        社区
+                    </a></div>
+                <div class="navItem"><a href="">
+                        App
+                    </a></div>
+            </div>
+            <div class="log">
+                <div class="navItem"><a href="">
+                        登录
+                    </a></div>
+                <div class="navItem"><a href="">
+                        注册
+                    </a></div>
+            </div>
+        </div>
+    </div>
+    <div class="bd">
+        <div class="text">
+            <div>
+                <span class="day">27</span>
+                <span class="m_Y">/Mar.2021</span>
+            </div>
+            <div>
+                <span class="desc">【与世界的对话集】 疫情之下，神探英国小众秘境，遇见每一个走进内心的风景</span>
+            </div>
+        </div>
+        <div class="content">
+            <div class="tabbar">
+                <label>
+                    <input type="radio" name="type" checked>
+                    <span>全部</span>
+                </label>
+                <label>
+                    <input type="radio" name="type">
+                    <span>酒店</span>
+                </label>
+                <label>
+                    <input type="radio" name="type">
+                    <span>目的地</span>
+                </label>
+                <label>
+                    <input type="radio" name="type">
+                    <span>去旅行</span>
+                </label>
+                <label>
+                    <input type="radio" name="type">
+                    <span>机票</span>
+                </label>
+            </div>
+            <div class="search">
+                <div class="input">
+                    <input type="text" placeholder="搜目的地/攻略/酒店/旅行特价">
+                </div>
+
+            </div>
+            <button>
+                <a href="">
+                    Go
+                </a>
+            </button>
+        </div>
+        <div class="sidebar">
+            <div class="slideImg">
+                <img src="../pic/carousel01.jpg" alt="">
+            </div>
+            <div class="slideImg selected">
+                <img src="../pic/carousel02.jpg" alt="">
+            </div>
+            <div class="slideImg">
+                <img src="../pic/carousel03.jpg" alt="">
+            </div>
+            <div class="slideImg">
+                <img src="../pic/carousel04.jpg" alt="">
+            </div>
+            <div class="slideImg">
+                <img src="../pic/carousel05.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .header {
+            width: 100%;
+            height: 75px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .headerBgi {
+            background-color: #000;
+            width: 100%;
+            height: 25px;
+        }
+
+        .wrapper {
+            display: inline-block;
+            width: 1024px;
+            height: 50px;
+        }
+
+        .nav {
+            display: flex;
+            height: 50px;
+            float: left;
+        }
+
+        .log {
+            display: flex;
+            height: 50px;
+            float: right;
+        }
+
+        .navImg {
+            width: 60px;
+            height: 50px;
+            margin: 0 16px;
+        }
+
+        .navItem {
+            border: 16px solid #fff;
+        }
+
+        /* .on{
+            border: 16px solid #ff9d00;
+            background-color: #ff9d00;
+            color: #fff;
+        } */
+
+        .navItem:hover {
+            border: 16px solid #ff9d00;
+            background-color: #ff9d00;
+            color: #fff;
+        }
+
+        .bd {
+            position: relative;
+            width: 100%;
+            height: 466px;
+            background: url("../pic/carousel02.jpg")no-repeat;
+            background-size: 100% 100%;
+        }
+
+
+        .text {
+            padding-top: 20px;
+            max-width: 100%;
+            margin-left: 200px;
+            color: #fff;
+        }
+
+        span.day {
+            font-size: 30px;
+        }
+
+        span.m_Y {
+            font-size: 20px;
+        }
+
+        span.desc {
+            font-size: 20px;
+        }
+
+        .sidebar {
+            position: absolute;
+            top: 68px;
+            right: 45px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .slideImg {
+            width: 106px;
+            height: 58px;
+            margin: 5px 0;
+        }
+
+        .selected {
+            border: 2px solid #ff9d00;
+        }
+
+        .slideImg img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+
+        .content {
+            width: 518px;
+            height: 100px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 60px;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            /**/
+            padding: 10px;
+        }
+
+        .tabbar {
+            margin-left: 10px;
+            width: 100%;
+        }
+
+        .content .tabbar span {
+            color: #fff;
+            margin-right: 15px;
+        }
+
+        .search {
+            margin-top: 10px;
+            margin-left: 10px;
+            display: inline-block;
+        }
+
+        .search .input {
+            width: 410px;
+            height: 40px;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+
+        .search .input input {
+            width: 350px;
+            height: 100%;
+            margin-left: 30px;
+            /* 为什么 margin:0 auto 无效  */
+            border: none;
+
+        }
+
+        .search .input input::placeholder {
+            font-size: 10px;
+        }
+
+        .content button {
+            display: inline-block;
+            background-color: #ff9d00;
+            padding: 10px;
+            border-radius: 10px;
+            margin-left: 5px;
+        }
+        .content button a{
+            color: #fff;
+        }
+    </style>
+</body>
+
+</html>
