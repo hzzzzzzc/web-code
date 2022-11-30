@@ -52,7 +52,7 @@
             </div>
         </div>
     </div>
-    <div class="bd">
+    <div class="bd" style="background-image: url(./pic/carousel02.jpg );">
         <div class="text">
             <div>
                 <span class="day">27</span>
@@ -98,19 +98,19 @@
             </button>
         </div>
         <div class="sidebar">
-            <div class="slideImg">
+            <div class="slideImg" name="slideImg">
                 <img src="./pic/carousel01.jpg" alt="">
             </div>
-            <div class="slideImg selected">
+            <div class="slideImg selected" name="slideImg">
                 <img src="./pic/carousel02.jpg" alt="">
             </div>
-            <div class="slideImg">
+            <div class="slideImg" name="slideImg">
                 <img src="./pic/carousel03.jpg" alt="">
             </div>
-            <div class="slideImg">
+            <div class="slideImg" name="slideImg">
                 <img src="./pic/carousel04.jpg" alt="">
             </div>
-            <div class="slideImg">
+            <div class="slideImg" name="slideImg">
                 <img src="./pic/carousel05.jpg" alt="">
             </div>
         </div>
@@ -518,8 +518,8 @@
             position: relative;
             width: 100%;
             height: 466px;
-            background: url("./pic/carousel02.jpg")no-repeat;
             background-size: 100% 100%;
+            transition: .6s;
         }
 
 
@@ -557,11 +557,12 @@
             margin: 5px 0;
         }
 
+        /* 
         .slideImg:hover {
             border: 2px solid #ff9d00;
-        }
+        } */
 
-        .selected{
+        .selected {
             border: 2px solid #ff9d00;
         }
 
@@ -844,7 +845,7 @@
             height: 20px;
         }
 
-        .connectList{
+        .connectList {
             display: flex;
         }
 
@@ -853,17 +854,48 @@
             height: 104px;
         }
 
-        .connect{
+        .connect {
             margin-right: 40px;
         }
 
-        .connectDesc{
+        .connectDesc {
             color: #c2c2c2;
             font-size: 14px;
             display: flex;
             justify-content: center;
         }
     </style>
+    <script>
+
+        let slideImg = document.querySelector('.slideImg')
+        // 这种方式只能拿到一个节点
+        let slideImgNames = document.getElementsByName('slideImg')
+        let select = 1
+        function change(elm, idx, auto) {
+            if (auto) {
+                elm.className = 'slideImg'
+                if(select == 4) {
+                    select = 0
+                }else select++ 
+                slideImgNames[select].className = 'slideImg selected'
+                document.getElementsByClassName('bd')[0].style.backgroundImage = `url(./pic/carousel0${select + 1}.jpg )`
+                }
+                else {
+                if (elm.className == 'slideImg') {
+                    elm.className = `${elm.className} selected`
+                    if (select > -1) slideImgNames[select].className = 'slideImg';
+                    document.getElementsByClassName('bd')[0].style.backgroundImage = `url(./pic/carousel0${idx + 1}.jpg )`
+                    select = idx
+                }
+            }
+
+        }
+        slideImgNames.forEach((elm, idx) => elm.addEventListener('click', () => change(elm, idx, auto = false)))
+        setInterval(() => {
+            change(slideImgNames[select], select, auto = true)
+            if (select > 4) select = 0
+        }, 4000)
+    </script>
 </body>
 
 </html>
